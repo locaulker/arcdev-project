@@ -7,13 +7,18 @@ export default createTheme({
   palette: {
     common: {
       blue: `${arcBlue}`,
-      orange: `${arcOrange}`,
+      orange: `${arcOrange}`
     },
     primary: {
-      main: `${arcBlue}`,
+      main: `${arcBlue}`
     },
     secondary: {
-      main: `${arcOrange}`,
-    },
+      main: `${arcOrange}`
+    }
   },
+  typography: {
+    h3: {
+      fontWeight: 300
+    }
+  }
 })
