@@ -1,9 +1,10 @@
 import React from "react"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
-import Typography from "@material-ui/core/Typography"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
 import { makeStyles } from "@material-ui/styles"
+
+import logo from "../../assets/logo.svg"
 
 function ElevationScroll(props) {
   const { children } = props
@@ -31,7 +32,7 @@ export default function Header(props) {
       <ElevationScroll>
         <AppBar position="fixed">
           <Toolbar>
-            <Typography variant="h3">Arc Development</Typography>
+            <img src={logo} alt="company logo" />
           </Toolbar>
         </AppBar>
       </ElevationScroll>
