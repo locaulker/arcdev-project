@@ -11,18 +11,22 @@ function ElevationScroll(props) {
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 0
+    threshold: 0,
   })
 
   return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0
+    elevation: trigger ? 4 : 0,
   })
 }
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
-    ...theme.mixins.toolbar
-  }
+    ...theme.mixins.toolbar,
+    marginBottom: "3em",
+  },
+  logo: {
+    height: "7em",
+  },
 }))
 
 export default function Header(props) {
@@ -31,8 +35,13 @@ export default function Header(props) {
     <React.Fragment>
       <ElevationScroll>
         <AppBar position="fixed">
+<<<<<<< HEAD
           <Toolbar>
             <img src={logo} alt="company logo" />
+=======
+          <Toolbar disableGutters={true}>
+            <img className={classes.logo} src={logo} alt="Company Logo" />
+>>>>>>> master
           </Toolbar>
         </AppBar>
       </ElevationScroll>
