@@ -14,37 +14,37 @@ function ElevationScroll(props) {
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 0
+    threshold: 0,
   })
 
   return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0
+    elevation: trigger ? 4 : 0,
   })
 }
 
 const useStyles = makeStyles(theme => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
-    marginBottom: "3em"
+    marginBottom: "3em",
   },
   logo: {
-    height: "7em"
+    height: "7em",
   },
   tabContainer: {
-    marginLeft: "auto"
+    marginLeft: "auto",
   },
   tab: {
     ...theme.typography.tab,
     minWidth: 10,
-    marginLeft: "25px"
+    marginLeft: "25px",
   },
   button: {
     ...theme.typography.estimate,
     borderRadius: "50px",
     marginLeft: "50px",
     marginRight: "25px",
-    padding: "10px 25px"
-  }
+    height: "45px",
+  },
 }))
 
 export default function Header(props) {
