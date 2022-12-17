@@ -160,11 +160,46 @@ export default function Header(props) {
               onClose={handleClose}
               MenuListProps={{ onMouseLeave: handleClose }}
             >
-              <MenuItem onClick={handleClick}>
+              <MenuItem
+                onClick={() => {
+                  handleClose()
+                  setValue(1)
+                }}
+                component={Link}
+                to="/services"
+              >
+                Services
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleClose()
+                  setValue(1)
+                }}
+                component={Link}
+                to="/customsoftware"
+              >
                 Custom Software Development
               </MenuItem>
-              <MenuItem onClick={handleClick}>Mobile App Development</MenuItem>
-              <MenuItem onClick={handleClick}>Website Development</MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleClose()
+                  setValue(1)
+                }}
+                component={Link}
+                to="/mobileapps"
+              >
+                Mobile App Development
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleClose()
+                  setValue(1)
+                }}
+                component={Link}
+                to="/websites"
+              >
+                Website Development
+              </MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
